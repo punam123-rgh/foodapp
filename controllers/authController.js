@@ -40,4 +40,9 @@ const registerController = async (req, resp) => {
   }
 };
 
-module.exports = { registerController };
+const getdata = async(req,resp)=>{
+const result = await usermodel.find()
+resp.send(result)
+}
+
+module.exports = { registerController,getdata };
